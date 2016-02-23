@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
+	<title>{% block title %}{% endblock %} - Torrent Monitoring</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+	<script src="{{ url_for('static', filename='js/loadingoverlay.min.js') }}"></script>
+
+	{% assets "scss_all" %}
+		<link rel=stylesheet type=text/css href="{{ ASSET_URL }}">
+	{% endassets %}
+
+</head>
+<body>
+	<span id="main_header">
+		{% block main_header %}
+			{% include "main_header.html" %}
+		{% endblock %}
+	</span>
+	<span id="content">
+		{% block content %}
+		{% endblock %}
+	</span>
+	<span id="main_footer" class="container">
+		{% block main_footer %}
+			{% include "main_footer.html" %}
+		{% endblock %}
+	</span>
+
+	{% assets "coffee_all" %}
+		<script src="{{ ASSET_URL }}"></script>
+	{% endassets %}
+	<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
