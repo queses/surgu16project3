@@ -1,0 +1,35 @@
+/* HEADER */
+
+/* CONTENT */
+#index-container {
+	// display: flex;
+	// flex-direction: column;
+	margin-top: 25vh;
+}
+
+#logo {
+	display: flex;
+	justify-content: center;
+}
+#search{
+	display: flex;
+    justify-content: center;
+}
+
+#search div input{
+    width: 50vw;
+    margin-right: 1em;
+}
+
+/* FOOTER */
+#footer-container {
+	//  position: relative;
+	// margin-top: -2ex; /* negative value of footer height */
+	// height: 2ex;
+	// clear:both;
+	color: grey;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: flex-end;
+}

@@ -5,9 +5,14 @@ from application.nocache import nocache
 
 from application.controllers import *
 
+@app.route("/index")
+@app.route("/")
+def index_route():
+	return index.__return__()
+
+'''
 # BOARD MODULE
 #
-@app.route('/')
 @app.route('/board')
 # @nocache
 def board_route():
@@ -21,4 +26,5 @@ def lecturer_modal(id):
 #
 @app.route('/test', methods=['POST'])
 def test_route():
-    return test.__return__()    
+    return test.__return__()
+'''    

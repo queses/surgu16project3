@@ -1,0 +1,16 @@
+{% extends "base.jhtml" %}
+
+{% block content %}
+<div id="index-container" class="container-fluid">
+    <div id="logo">
+   		<img src={{ url_for("static", filename="./img/tormon.png") }}></img>
+   	</div>
+
+    <form id='search' class="form-inline" role="form">
+      <div class="form-group">
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Введите название фильма">
+      </div>
+      <button type="submit" class="btn btn-info">Найти</button>
+    </form>	
+</div>
+{% endblock %}
